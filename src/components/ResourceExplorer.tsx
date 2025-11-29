@@ -189,9 +189,14 @@ export const ResourceExplorer = () => {
                             <Badge variant="outline">
                               {domainControlCounts[domain.id.toLowerCase()] || 0} sample controls
                             </Badge>
-                            <button className="text-xs text-primary flex items-center gap-1 hover:underline">
+                            <a 
+                              href="https://securecontrolsframework.com/scf-domains/" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-xs text-primary flex items-center gap-1 hover:underline"
+                            >
                               View all controls <ExternalLink className="h-3 w-3" />
-                            </button>
+                            </a>
                           </div>
                         </div>
                       )}

@@ -154,12 +154,12 @@ export const ComplianceTracker = () => {
       {/* Filters */}
       <div className="p-4 border-b border-border/50 flex items-center gap-4">
         <Filter className="h-4 w-4 text-muted-foreground" />
-        <Select value={selectedFramework} onValueChange={setSelectedFramework}>
+        <Select value={selectedFramework} onValueChange={(val) => setSelectedFramework(val === 'all' ? '' : val)}>
           <SelectTrigger className="w-[200px]">
             <SelectValue placeholder="All Frameworks" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Frameworks</SelectItem>
+            <SelectItem value="all">All Frameworks</SelectItem>
             {frameworks.slice(0, 10).map(f => (
               <SelectItem key={f.id} value={f.shortName}>{f.shortName}</SelectItem>
             ))}
